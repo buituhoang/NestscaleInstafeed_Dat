@@ -1,0 +1,23 @@
+<odoo>
+    <data>
+        <template id="app-test">
+            &lt;!DOCTYPE html&gt;
+            <head>
+                <title>App Test</title>
+                <link type="image/x-icon" rel="shortcut icon" href=""/>
+                <meta name="viewport" content="width=device-width"/>
+            </head>
+            <div id="app-id"/>
+            <script src="https://kit.fontawesome.com/3ec5aa8ff1.js" crossorigin="anonymous"></script>
+            <script>
+                window.app_settings =
+                <t t-raw="app_setting"/>
+            </script>
+            <!-- Sử dụng dòng này nếu chạy trên locale (ấn ctrl + F5 để refresh cache) -->
+            <script type="text/javascript" src="/instafeed/static/js/index.js"/>
+            <!-- ##-->
+            <!-- Sử dụng dòng này nếu chạy trên server (restart server để refresh code) -->
+            <!-- <t t-call-assets="module_name.app_js_package_assets"/> -->
+        </template>
+    </data>
+</odoo>

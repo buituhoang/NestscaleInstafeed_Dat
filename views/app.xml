@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <menuitem id="instafeed_root"
+                  name="Instafeed"
+                  sequence="20"/>
+
+        <menuitem id="menu_bundle_dashboard"
+            name="Dashboard"
+            sequence="1"
+            parent="instafeed_root"/>
+
+<!--        Menu: Go to website -->
+        <record id="ir_actions_server_bundle_redirect" model="ir.actions.act_url">
+            <field name="name">Website instafeed redirect</field>
+            <field name="url">https://odoo.website/apps/instafeed</field>
+        </record>
+
+        <menuitem id="menu_website_bundle" parent="menu_bundle_dashboard"
+            sequence="20" name="Website"
+            action="ir_actions_server_bundle_redirect"/>
+    </data>
+</odoo>

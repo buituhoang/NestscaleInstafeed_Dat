@@ -1,0 +1,13 @@
+<div class="app-shopify-id" feed_id="{{ block.settings.feed_id }}"></div>
+<script src="https://odoo.website/instafeed/static/js/shopify.js"></script>
+
+{% schema %}
+{
+  "name": "Instafeed",
+  "target": "section",
+  "settings": [
+    { "type": "text", "id": "feed_id", "label": "Feed id" }
+  ]
+}
+{% endschema %}
+

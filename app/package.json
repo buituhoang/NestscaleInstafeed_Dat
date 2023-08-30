@@ -1,0 +1,36 @@
+{
+  "name": "instafeed",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "dev": "",
+    "shopify": "webpack --env NODE_ENV=development --config ./webpack_shopify.config.dev.js",
+    "build": "webpack --env NODE_ENV=development --config ./webpack.config.dev.js",
+    "production": "webpack --env NODE_ENV=production --config ./webpack.config.dev.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ant-design-vue": "^3.2.3",
+    "axios": "^0.27.2",
+    "babel-loader": "^8.2.5",
+    "babel-plugin-syntax-jsx": "^6.18.0",
+    "babel-plugin-transform-vue-jsx": "^3.7.0",
+    "babel-preset-es2015": "^6.24.1",
+    "css-loader": "^6.7.1",
+    "lodash": "^4.17.21",
+    "path": "^0.12.7",
+    "sass-loader": "^11.1.0",
+    "style-loader": "^3.3.1",
+    "vue": "^3.2.33",
+    "vue-loader": "^17.0.0",
+    "vue-router": "^4.2.2",
+    "vue-style-loader": "^4.1.3",
+    "vue-template-compiler": "^2.6.14",
+    "vuex": "^4.0.2",
+    "vuex-persistedstate": "^4.1.0",
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2"
+  }
+}

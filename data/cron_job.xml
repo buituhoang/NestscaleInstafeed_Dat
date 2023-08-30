@@ -1,0 +1,16 @@
+<openerp>
+    <data>
+        <record id="ir_cron_test_cron_job" model="ir.cron" forcecreate="True">
+            <field name="name">Test Cron Job</field>
+            <field name="model_id" ref="model_shopify_shop"/>
+            <field name="state">code</field>
+            <field name="code">model.reset_script_tag()</field>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="interval_number">15</field>
+            <field name="interval_type">minutes</field>
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="True"/>
+        <!-- <field name="nextcall" eval="(DateTime.now()).strftime('%Y-%m-%d 00:00:01')"/>-->
+        </record>
+    </data>
+</openerp>

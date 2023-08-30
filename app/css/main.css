@@ -1,0 +1,125 @@
+*{
+    font-size: 14px;
+    font-family: "Inter";
+    overflow: hidden;
+}
+
+input{
+    border: 1px solid #E2E2E2;
+    border-radius: 6px;
+    padding: 5px 5px 5px 15px;
+}
+select{
+    border: 1px solid #E2E2E2;
+    border-radius: 6px;
+    padding: 7px 6px 7px 15px;
+    background: white;
+}
+.flex{
+    display: flex;
+}
+
+.space-between{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.align-items-center{
+    align-items: center;
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+.w-100{
+    width: 100%;
+}
+
+.w-60{
+    width: 60%;
+}
+
+.w-50{
+    width: 50%;
+}
+
+.w-40{
+    width: 40%;
+}
+
+.display-none{
+    display: none !important;
+}
+
+.content{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+}
+
+::-webkit-scrollbar{
+    width: 6px;
+    padding: 0;
+}
+::-webkit-scrollbar-track {
+    background: white;
+    padding: 0;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #BFBFBF;
+    border-radius: 5px;
+    padding: 0;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background: #555;
+}
+
+/*Bundle process*/
+.add-product-process a{
+    color:black;
+}
+
+.add-product-process{
+    display: flex;
+    float: right;
+    margin: 11px 30px 0;
+}
+
+.add-product-process>div{
+    cursor: pointer;
+    min-width: 62px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25px;
+    background: #E2E2E2;
+    border-radius: 4px;
+    font-weight: 500;
+    line-height: 24px;
+    padding: 0 12px;
+}
+
+.add-product-process div:nth-child(2){
+    font-weight: 700;
+}
+
+.back{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background: #c3c3c3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+}
+.back:hover{
+    color:white;
+}
