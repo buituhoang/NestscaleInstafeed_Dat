@@ -71,27 +71,28 @@ class TiktokController(http.Controller):
             video_list_decode = video_list.json()['data']['videos']
             for video in video_list_decode:
                 video_search = request.env['tiktok.post'].sudo().search([('post_id','=',video['id'])])
-                if not video_search:
-                    request.env['tiktok.post'].sudo().create({
-                        'user_id':tikok_user.id,
-                        'post_id':video['id'],
-                        'cover_img': video['cover_image_url'],
-                        'embed_link':video['embed_link'],
-                        'share_url':video['share_url'],
-                        'title':video['title'],
-                        'like_count':video['like_count'],
-                        'comment_count':video['comment_count'],
-                        'share_count':video['share_count'],
-                    })
-                else:
-                    video_search.write({
-                        'user_id': tikok_user.id,
-                        'cover_img': video['cover_image_url'],
-                        'embed_link': video['embed_link'],
-                        'share_url': video['share_url'],
-                        'title': video['title'],
-                        'like_count': video['like_count'],
-                        'comment_count': video['comment_count'],
-                        'share_count': video['share_count'],
-                    })
+                if 'embed_link' in video:
+                    if not video_search:
+                        request.env['tiktok.post'].sudo().create({
+                            'user_id':tikok_user.id,
+                            'post_id':video['id'],
+                            'cover_img': video['cover_image_url'],
+                            'embed_link':video['embed_link'],
+                            'share_url':video['share_url'],
+                            'title':video['title'],
+                            'like_count':video['like_count'],
+                            'comment_count':video['comment_count'],
+                            'share_count':video['share_count'],
+                        })
+                    else:
+                        video_search.write({
+                            'user_id': tikok_user.id,
+                            'cover_img': video['cover_image_url'],
+                            'embed_link': video['embed_link'],
+                            'share_url': video['share_url'],
+                            'title': video['title'],
+                            'like_count': video['like_count'],
+                            'comment_count': video['comment_count'],
+                            'share_count': video['share_count'],
+                        })
         return werkzeug.utils.redirect('https://odoo.website/')

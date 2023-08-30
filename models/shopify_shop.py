@@ -7,7 +7,7 @@ from odoo import fields, models, api
 class ShopifyShop(models.Model):
     _name = 'shopify.shop'
 
-    user_id = fields.Many2one('res.user')
+    user_id = fields.Many2one('res.users')
     shop_url = fields.Char()
     shop_name = fields.Char()
     shopify_id = fields.Char()

@@ -27,7 +27,7 @@ export default {
     }
   },
   mounted() {
-    axios.post('https://odoo.website/feed/posts',{
+    axios.post('https://6865-116-97-240-10.ngrok-free.app/feed/posts',{
       jsonrpc:2.0,
       params:{
         hash_feed_id:this.feed_id,
