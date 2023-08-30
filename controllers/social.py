@@ -31,7 +31,7 @@ class SocialController(http.Controller):
     @http.route('/media_source/list', type='json', auth='user', cors='*', method=['POST'])
     def get_media_source_list(self,**kw):
         media_source_list = []
-        for media_source in request.env['media.source'].sudo().search([]):
+        for media_source in request.env['media.source'].sudo().search([('create_uid','=',request.env.user.id)]):
             source_account = ''
             if media_source['platform'] == 'tiktok':
                 source_account = media_source.tiktok_id.username
@@ -233,7 +233,7 @@ class SocialController(http.Controller):
     @http.route('/feed/list', type='json', auth='user', cors='*', method=['POST'])
     def get_feed_list(self):
         feed_list = []
-        for feed in request.env['social.feed'].sudo().search([]):
+        for feed in request.env['social.feed'].sudo().search([('create_uid','=',request.env.user.id)]):
             feed_list.append({
                 'id':feed['id'],
                 'feed_name':feed.title,

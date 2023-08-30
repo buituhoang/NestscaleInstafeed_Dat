@@ -21,14 +21,14 @@ class ShopifyShop(models.Model):
     is_delete = fields.Boolean(default=False)
 
     def init_shopify_session(self):
-        api_version = self.env['ir.config_parameter'].sudo().get_param('shopify_api_version')
+        api_version = self.env['ir.config_parameter'].sudo().get_param('instafeed.shopify_api_version')
         session = shopify.Session(self.shop_url, api_version, self.token)
         shopify.ShopifyResource.activate_session(session)
 
     def make_webhook(self):
         self.destroy_webhook()
 
-        ngrok_address = self.env["ir.config_parameter"].sudo().get_param("ngrok_address")
+        ngrok_address = self.env["ir.config_parameter"].sudo().get_param("instafeed.ngrok_address")
         shopify.Webhook({
             'topic': "app/uninstalled",
             'address': ngrok_address + f"/webhook/uninstall/{self.id}",
@@ -37,7 +37,7 @@ class ShopifyShop(models.Model):
 
     def make_script_tag(self):
         self.destroy_script_tag()
-        script_tag = self.env["ir.config_parameter"].sudo().get_param("sp_script_tag")
+        script_tag = self.env["ir.config_parameter"].sudo().get_param("instafeed.sp_script_tag")
         base_url = self.env['ir.config_parameter'].sudo().get_param('web.base.url')
         shopify.ScriptTag.create({
             "event": "onload",

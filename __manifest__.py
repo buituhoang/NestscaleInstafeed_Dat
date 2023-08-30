@@ -2,7 +2,7 @@
     'name': 'Instafeed',
     'version': '1.0.0',
     'category': 'Sale',
-    'author': 'Odoo Mates',
+    'author': 'Dat',
     'sequence':-101,
     'summary': 'Hospital management system',
     'description': """Hospital management system""",

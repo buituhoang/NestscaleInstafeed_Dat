@@ -23,9 +23,9 @@ class AuthShopifyController(http.Controller):
     @http.route('/shopify/instafeed/auth', auth='public')
     def shopify_auth2(self, **kw):
         if 'shop' in kw:
-            api_version = request.env['ir.config_parameter'].sudo().get_param('shopify_api_version')
-            shopify_key = request.env['ir.config_parameter'].sudo().get_param('shopify_key')
-            shopify_secret = request.env['ir.config_parameter'].sudo().get_param('shopify_secret')
+            api_version = request.env['ir.config_parameter'].sudo().get_param('instafeed.shopify_api_version')
+            shopify_key = request.env['ir.config_parameter'].sudo().get_param('instafeed.shopify_key')
+            shopify_secret = request.env['ir.config_parameter'].sudo().get_param('instafeed.shopify_secret')
 
             shopify.Session.setup(api_key=shopify_key, secret=shopify_secret)
 
@@ -53,9 +53,9 @@ class AuthShopifyController(http.Controller):
         if 'shop' not in request.params:
             raise Exception('Missing shop url parameter')
 
-        api_version = request.env['ir.config_parameter'].sudo().get_param('shopify_api_version')
-        shopify_key = request.env['ir.config_parameter'].sudo().get_param('shopify_key')
-        shopify_secret = request.env['ir.config_parameter'].sudo().get_param('shopify_secret')
+        api_version = request.env['ir.config_parameter'].sudo().get_param('instafeed.shopify_api_version')
+        shopify_key = request.env['ir.config_parameter'].sudo().get_param('instafeed.shopify_key')
+        shopify_secret = request.env['ir.config_parameter'].sudo().get_param('instafeed.shopify_secret')
 
         shop_url = kw['shop']
 

@@ -10,44 +10,44 @@
                 <xpath expr="//div[hasclass('settings')]" position="inside">
                     <div class="app_settings_block" data-string="instafeed" string="Instafeed Settings"
                          data-key="instafeed">
-                        <h2>Bought Together Config</h2>
+                        <h2>Instafeed Config</h2>
                         <div class="row mt16 o_settings_container">
                             <div class="col-12 col-lg-6 o_setting_box" id="shopify_app">
                                 <div class="o_setting_right_pane">
                                     <span class="o_form_label">Shopify App</span>
                                     <div class="content-group">
                                         <div class="row mt16">
-                                            <label for="shopify_key" string="Shopify API Key"
+                                            <label for="instafeed_shopify_key" string="Shopify API Key"
                                                    class="col-lg-3 o_light_label"/>
-                                            <field name="shopify_key"/>
+                                            <field name="instafeed_shopify_key"/>
                                         </div>
                                     </div>
                                     <div class="content-group">
                                         <div class="row mt16">
-                                            <label for="shopify_secret" string="Shopify API Secret"
+                                            <label for="instafeed_shopify_secret" string="Shopify API Secret"
                                                    class="col-lg-3 o_light_label"/>
-                                            <field name="shopify_secret"/>
+                                            <field name="instafeed_shopify_secret"/>
                                         </div>
                                     </div>
                                     <div class="content-group">
                                         <div class="row mt16">
-                                            <label for="shopify_api_version" string="Shopify API version"
+                                            <label for="instafeed_shopify_api_version" string="Shopify API version"
                                                    class="col-lg-3 o_light_label"/>
-                                            <field name="shopify_api_version"/>
+                                            <field name="instafeed_shopify_api_version"/>
                                         </div>
                                     </div>
                                     <div class="content-group">
                                         <div class="row mt16">
-                                            <label for="ngrok_address" string="Ngrok Address"
+                                            <label for="instafeed_ngrok_address" string="Ngrok Address"
                                                    class="col-lg-3 o_light_label"/>
-                                            <field name="ngrok_address"/>
+                                            <field name="instafeed_ngrok_address"/>
                                         </div>
                                     </div>
                                     <div class="content-group">
                                         <div class="row mt16">
-                                            <label for="sp_script_tag" string="Script tag"
+                                            <label for="instafeed_sp_script_tag" string="Script tag"
                                                    class="col-lg-3 o_light_label"/>
-                                            <field name="sp_script_tag"/>
+                                            <field name="instafeed_sp_script_tag"/>
                                             <button name="add_script_tag_to_shop_shopify_shop" string="Update script tag" type="object" class="oe_highlight"/>
                                         </div>
                                     </div>
@@ -55,46 +55,46 @@
                                     <span class="o_form_label">Facebook App</span>
                                     <div class="content-group">
                                         <div class="row mt16">
-                                            <label for="facebook_client_id" string="Facebook Client Key"
+                                            <label for="instafeed_facebook_client_id" string="Facebook Client Key"
                                                    class="col-lg-3 o_light_label"/>
-                                            <field name="facebook_client_id"/>
+                                            <field name="instafeed_facebook_client_id"/>
                                         </div>
                                     </div>
                                     <div class="content-group">
                                         <div class="row mt16">
-                                            <label for="facebook_secret" string="Facebook secret"
+                                            <label for="instafeed_facebook_secret" string="Facebook secret"
                                                    class="col-lg-3 o_light_label"/>
-                                            <field name="facebook_secret"/>
+                                            <field name="instafeed_facebook_secret"/>
                                         </div>
                                     </div>
                                     <div class="content-group">
                                         <div class="row mt16">
-                                            <label for="facebook_redirect_uri" string="Facebook Redirect URI"
+                                            <label for="instafeed_facebook_redirect_uri" string="Facebook Redirect URI"
                                                    class="col-lg-3 o_light_label"/>
-                                            <field name="facebook_redirect_uri"/>
+                                            <field name="instafeed_facebook_redirect_uri"/>
                                         </div>
                                     </div>
 
                                     <span class="o_form_label">Tiktok App</span>
                                     <div class="content-group">
                                         <div class="row mt16">
-                                            <label for="facebook_client_id" string="Tiktok App ID"
+                                            <label for="instafeed_facebook_client_id" string="Tiktok App ID"
                                                    class="col-lg-3 o_light_label"/>
-                                            <field name="tiktok_app_id"/>
+                                            <field name="instafeed_tiktok_app_id"/>
                                         </div>
                                     </div>
                                     <div class="content-group">
                                         <div class="row mt16">
-                                            <label for="facebook_secret" string="Tiktok Client Key"
+                                            <label for="instafeed_facebook_secret" string="Tiktok Client Key"
                                                    class="col-lg-3 o_light_label"/>
-                                            <field name="tiktok_client_key"/>
+                                            <field name="instafeed_tiktok_client_key"/>
                                         </div>
                                     </div>
                                     <div class="content-group">
                                         <div class="row mt16">
-                                            <label for="facebook_redirect_uri" string="Tiktok Secret Key"
+                                            <label for="instafeed_facebook_redirect_uri" string="Tiktok Secret Key"
                                                    class="col-lg-3 o_light_label"/>
-                                            <field name="tiktok_secret_key"/>
+                                            <field name="instafeed_tiktok_secret_key"/>
                                         </div>
                                     </div>
                                 </div>
