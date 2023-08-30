@@ -4,7 +4,7 @@ from odoo import fields, api, models
 class TiktokUser(models.Model):
     _name = "tiktok.user"
 
-    admin = fields.Many2one('res.user')
+    admin = fields.Many2one('res.users')
     open_id = fields.Char()
     union_id = fields.Char()
     profile_img = fields.Char()
