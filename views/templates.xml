@@ -17,7 +17,7 @@
             <script type="text/javascript" src="/instafeed/static/js/index.js"/>
             <!-- ##-->
             <!-- Sử dụng dòng này nếu chạy trên server (restart server để refresh code) -->
-            <!-- <t t-call-assets="module_name.app_js_package_assets"/> -->
+            <!-- <t t-call-assets="instafeed.instafeed_js_package_assets"/> -->
         </template>
     </data>
 </odoo>

@@ -31,6 +31,7 @@
 
             <div class="product-list">
               <button v-if="customize_hotspot" @click="product_modal=true">Tag products</button>
+<!--                Fetch dữ liệu product từ store mỗi khi ấn tag product-->
               <div v-for="product in products_list" class="product-row">
                 <div v-if="this.products_choosen.includes(product.shopify_id)" class="flex">
                   <span v-if="customize_hotspot" @click="choose_product(product.shopify_id,product.img,product.title)" class="remove-product-choosen">x</span>

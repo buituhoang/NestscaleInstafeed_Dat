@@ -16,9 +16,10 @@ class ShopifyShop(models.Model):
     email = fields.Char()
     phone = fields.Char()
     token = fields.Char()
-    is_update_script_tag = fields.Boolean()
+    # is_update_script_tag = fields.Boolean()
     is_update_script_tag = fields.Boolean(default=False)
     is_delete = fields.Boolean(default=False)
+    # Todo: Thêm trường store domain
 
     def init_shopify_session(self):
         api_version = self.env['ir.config_parameter'].sudo().get_param('instafeed.shopify_api_version')
